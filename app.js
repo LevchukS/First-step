@@ -1,11 +1,42 @@
-const rad = prompt("Enter Radius","");
-let circleAria =  Math.pow(rad, 2) * Math.PI;
-alert(`Aria of a circle ${circleAria}`);
+HW2
 
-const actualage = prompt("Enter your age","");
-let age =  65 - actualage;
-alert(`to retirement left ${age}`);
 
-const num = prompt("Enter Number","");
-let numRevers = num.split("").reverse().join("");
-alert(`Number revers ${numRevers}`);
+//Help uncle, improve his buisness
+const numLength = Number(prompt("Введіть довжину",""));
+const numWeight = Number(prompt("Введіть ширину",""));
+const numHeight = Number(prompt("Введіть висоту",""));
+
+const paintCan = 16;
+if (isNaN(numLength && numWeight && numHeight) 
+&& 0 <= numLength && numWeight && numHeight <= 1000) 
+    {alert("помилка! Введено не коректне число");
+}
+else { let room = (numLength + numWeight) * 2 * numHeight;
+    const needCan = (room / paintCan);
+
+    alert(`Необхідно ${needCan}л фарби`);
+}
+
+
+
+   //Lucky or not?
+   const n = prompt("Введіть номер квитка","");
+if (n.length !== 6)
+   {alert("Помилка! Занадто мало символів");
+   }
+   num = Number(n);
+
+if (isNaN('n'))
+ {
+    alert("Помилка! Введено не коректне число");
+  } else if ('const nNum = n.split("")');
+
+const onePart = (nNum[0]) + (nNum[1]) + (nNum[2]);
+const secPart = (nNum[3]) + (nNum[4]) + (nNum[5]);
+if ( 'onePart !== secPart') {
+    alert(`Ваш квиток щасливий`);
+  } else {('onePart !== secPart');
+  alert(`Ваш квиток, звичайний`);
+}
+
+
