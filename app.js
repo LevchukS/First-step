@@ -18,6 +18,17 @@ else { let room = (numLength + numWeight) * 2 * numHeight;
 }
 
 
+//Celsius vs. Fahrenheit
+const celsTemp = Number(prompt('Введіть температуру в градусах Цельсія',''));
+
+if (isNaN(celsTemp))
+    {alert("помилка! Введено не коректне число");
+}
+else {const fahrTemp = celsTemp*1.8+32;
+    alert(`Температуру в градусах ${fahrTemp}`);
+}
+
+
 
    //Lucky or not?
    const n = prompt("Введіть номер квитка","");
