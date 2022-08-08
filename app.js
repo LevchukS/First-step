@@ -31,22 +31,21 @@ else {const fahrTemp = celsTemp*1.8+32;
 
 
    //Lucky or not?
-   const n = prompt("Введіть номер квитка","");
+ const n = prompt("Введіть номер квитка","");
 if (n.length !== 6)
    {alert("Помилка! Занадто мало символів");
    }
    num = Number(n);
 
-if (isNaN('n'))
+if (isNaN(num))
  {
     alert("Помилка! Введено не коректне число");
-  } else if ('const nNum = n.split("")');
-
-const onePart = (nNum[0]) + (nNum[1]) + (nNum[2]);
-const secPart = (nNum[3]) + (nNum[4]) + (nNum[5]);
-if ( 'onePart !== secPart') {
+  } else if (0 <= num <= 999999);
+const onePart = num[0] + num[1] + num[2];
+const secPart = num[3] + num[4] + num[5];
+if (onePart === secPart) {
     alert(`Ваш квиток щасливий`);
-  } else {('onePart !== secPart');
+  } else (onePart !== secPart);{
   alert(`Ваш квиток, звичайний`);
 }
 
