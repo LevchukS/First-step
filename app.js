@@ -1,52 +1,53 @@
-HW2
+//HW3
 
+//1 drowing line
+let inputSymbol;
 
-//Help uncle, improve his buisness
-const numLength = Number(prompt("Введіть довжину",""));
-const numWeight = Number(prompt("Введіть ширину",""));
-const numHeight = Number(prompt("Введіть висоту",""));
+do {
+    inputSymbol = prompt("Enter any symbol", "");
+} while (!inputSymbol);
 
-const paintCan = 16;
-if (isNaN(numLength && numWeight && numHeight) 
-&& 0 <= numLength && numWeight && numHeight <= 1000) 
-    {alert("помилка! Введено не коректне число");
+let inputWight;
+
+do {
+    inputWight = Number(prompt("Enter any positive integer number", ""));
+} while ((!inputWight) && isNaN(inputSymbol));
+if (inputWight<0){
+    alert('Error, please follow instruction');
 }
-else { let room = (numLength + numWeight) * 2 * numHeight;
-    const needCan = (room / paintCan);
+else String(inputSymbol);
+   let A = inputSymbol.repeat(inputWight);
+   alert(A);
+  
+    
 
-    alert(`Необхідно ${needCan}л фарби`);
-}
+    
+//2 DNA
 
+let inputDna;
 
-//Celsius vs. Fahrenheit
-const celsTemp = Number(prompt('Введіть температуру в градусах Цельсія',''));
+do {
+    inputDna = prompt("Enter DNA (use uppercase leters: A, C, G, T)", "");
+} while (!inputDna);
+const arrInputDna = Array.from(inputDna);
 
-if (isNaN(celsTemp))
-    {alert("помилка! Введено не коректне число");
-}
-else {const fahrTemp = celsTemp*1.8+32;
-    alert(`Температуру в градусах ${fahrTemp}`);
-}
-
-
-
-   //Lucky or not?
- const n = prompt("Введіть номер квитка","");
-if (n.length !== 6)
-   {alert("Помилка! Занадто мало символів");
-   }
-   num = Number(n);
-
-if (isNaN(num))
- {
-    alert("Помилка! Введено не коректне число");
-  } else if (0 <= num <= 999999);
-const onePart = num[0] + num[1] + num[2];
-const secPart = num[3] + num[4] + num[5];
-if (onePart === secPart) {
-    alert(`Ваш квиток щасливий`);
-  } else (onePart !== secPart);{
-  alert(`Ваш квиток, звичайний`);
-}
-
-
+function showOutputDna() {
+    for (i = 0; i < arrInputDna.length; i++) {
+        switch (arrInputDna[i]) {
+            case 'A':
+                arrInputDna[i] = "T";
+                break;
+            case 'T':
+                arrInputDna[i] = "A";
+                break;
+            case 'C':
+                arrInputDna[i] = "G";
+                break;
+            case 'G':
+                arrInputDna[i] = "C";
+                break;
+        };
+    };
+    return alert(arrInputDna.join(""));
+};
+showOutputDna();
