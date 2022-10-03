@@ -22,7 +22,6 @@ const isValidCountry = country => {
 const DOM = {
     inpDate : document.querySelector('.inp-date'),
     inpFrom : document.querySelector('.inp-from'),
-    btnCount : document.querySelector('.btn-count'),
     outAnswer : document.querySelector('.answer')
 };
 
@@ -35,7 +34,6 @@ const showAnswer = (totalCases) => {
 DOM.btnCount.onclick = () => {
     const date = DOM.inpDate.value;
     const from = DOM.inpFrom.value;
-    const to = DOM.inpTo.value;
 
     const isValidD = isValidDate(date);
     const isValidCountryFrom = isValidCountry(from);
@@ -44,7 +42,6 @@ DOM.btnCount.onclick = () => {
     if(isValidD && isValidCountryFrom){
         const year = date.split('-')[0];
         const fFrom = fetch(getCovidURL(from, year)).then(r => r.json());
-        const fTo = fetch(getCovidURL(to, year)).then(r => r.json());
 
         Promise.all([fFrom]).then(values => {
             const dates = values.flat().map(el => el.date);
